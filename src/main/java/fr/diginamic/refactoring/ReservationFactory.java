@@ -16,18 +16,18 @@ public class ReservationFactory {
 			TypeReservation typeReservation
 		) {
 		
-		//Conversion de la date de rÃ©servation en LocalDateTime
+		//Conversion de la date de réservation en LocalDateTime via DetailUtils (Ajout avec Tp_Grasp)
 		LocalDateTime dateReservation = DateUtils.toDate(dateReservationStr);
 		
-		//création de la réservation
+		//création d'une réservation
 		Reservation reservation = new Reservation(dateReservation);
 		reservation.setNbPlaces(nbPlaces);
 		reservation.setClient(client);
 		
-		//calcul du montant total
-		reservation.setTotal(ReservationCalcul.getReservationAmount(typeReservation, client, nbPlaces));
+		//calcul du montant total de la réservation via ReservationMontant (Ajout avec Tp_Grasp)
+		reservation.setTotal(ReservationCalcul.getReservationMontant(typeReservation, client, nbPlaces));
 		
-		//Ajout de la rÃ©servation au client
+		//Ajout de la réservation au client
 		client.getReservations().add(reservation);
 
 		return reservation;

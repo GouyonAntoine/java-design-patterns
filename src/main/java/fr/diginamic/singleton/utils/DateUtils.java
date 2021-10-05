@@ -12,8 +12,9 @@ public class DateUtils {
 	
 	/** Formateur par défaut: dd/mm/aaaa */
 	private static final DateTimeFormatter DEFAULT_FORMATTER = DateTimeFormatter.ofPattern("dd/MM/YYYY");
-	
-	private static final DateTimeFormatter DEFAULT_FORMATTER_TWO = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+
+	/** Formateur par défaut: dd/mm/aaaa hh:mm:ss */
+	private static final DateTimeFormatter DEFAULT_FORMATTER_TWO = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"); 
 
 	/** Formate une date en chaine de caractères
 	 * @param date date
@@ -23,6 +24,8 @@ public class DateUtils {
 		return DEFAULT_FORMATTER.format(date);
 	}
 	
+	/* Ajout méthode transformation dans DateUtils (Ajout avec Tp_Grasp)
+
 	/** Transforme une date au format String en {@link LocalDateTime}
 	 * @param dateStr date au format String
 	 * @return LocalDateTime

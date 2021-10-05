@@ -41,7 +41,7 @@ public class ReservationController {
 		// 3) Extraction de la base de données des infos concernant le type de la réservation
 		TypeReservation type = typeReservationDao.extraireTypeReservation(typeReservation);
 		
-		// 4) Création de la réservation
+		// 4) Création de la réservation via Factory (Ajout avec Tp_Grasp)
 		return ReservationFactory.getInstance(dateReservationStr, nbPlaces, client, type);
 	}
 }
