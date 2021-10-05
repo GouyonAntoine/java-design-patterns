@@ -9,6 +9,8 @@ import fr.diginamic.tp_grasps.beans.TypeReservation;
 import fr.diginamic.tp_grasps.daos.ClientDao;
 import fr.diginamic.tp_grasps.daos.TypeReservationDao;
 
+import fr.diginamic.tp_grasps.refactory.*;
+
 /** Controlleur qui prend en charge la gestion des réservations client
  * @author RichardBONNAMY
  *
@@ -36,17 +38,15 @@ public class ReservationController {
 		String typeReservation = params.getTypeReservation();
 		int nbPlaces = params.getNbPlaces();
 		
-		// 2) Conversion de la date de réservation en LocalDateTime
-		LocalDateTime dateReservation = toDate(dateReservationStr);
-		
-		// 3) Extraction de la base de données des informations client
+		// 2) Extraction de la base de données des informations client
 		Client client = clientDao.extraireClient(identifiantClient);
 		
-		// 4) Extraction de la base de données des infos concernant le type de la réservation
+		// 3) Extraction de la base de données des infos concernant le type de la réservation
 		TypeReservation type = typeReservationDao.extraireTypeReservation(typeReservation);
 		
+		/*
 		// 5) Création de la réservation
-		Reservation reservation = new Reservation(dateReservation);
+		ReservationFactory reservation = new Reservation(dateReservation);
 		reservation.setNbPlaces(nbPlaces);
 		reservation.setClient(client);
 		
@@ -63,15 +63,6 @@ public class ReservationController {
 		else {
 			reservation.setTotal(total);
 		}
-		return reservation;
-	}
-
-	/** Transforme une date au format String en {@link LocalDateTime}
-	 * @param dateStr date au format String
-	 * @return LocalDateTime
-	 */
-	private LocalDateTime toDate(String dateStr) {
-		
-		return LocalDateTime.parse(dateStr, formatter);
+		return reservation; */
 	}
 }
