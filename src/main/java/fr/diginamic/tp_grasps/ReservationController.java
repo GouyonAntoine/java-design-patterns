@@ -1,7 +1,5 @@
 package fr.diginamic.tp_grasps;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 import fr.diginamic.refactoring.ReservationFactory;
 import fr.diginamic.tp_grasps.beans.Client;
@@ -17,7 +15,7 @@ import fr.diginamic.tp_grasps.daos.TypeReservationDao;
 public class ReservationController {
 	
 	/** formatter */
-	private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+	//private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 	
 	/** DAO permettant d'accéder à la table des clients */
 	private ClientDao clientDao = new ClientDao();
