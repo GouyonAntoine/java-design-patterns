@@ -25,11 +25,19 @@ public class ReservationFactory {
 		reservation.setClient(client);
 		
 		//calcul du montant total de la réservation via ReservationMontant (Ajout avec Tp_Grasp)
-		reservation.setTotal(ReservationCalcul.getReservationMontant(typeReservation, client, nbPlaces));
+		reservation.setTotal(getReservationMontant(typeReservation, client, nbPlaces));
 		
 		//Ajout de la réservation au client
 		client.getReservations().add(reservation);
 
 		return reservation;
+	}
+
+	public static double getReservationMontant(TypeReservation type, Client client, int nbPlaces) {
+		double total = type.getMontant() * nbPlaces;
+		if (client.isPremium()) {
+			total = total*(1-type.getReductionPourcent()/100.0);
+		}
+		return total;
 	}
 }
