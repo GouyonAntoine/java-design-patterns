@@ -27,8 +27,7 @@ public class DateUtils {
 	 * @param dateStr date au format String
 	 * @return LocalDateTime
 	 */
-	private LocalDateTime toDate(String dateStr) {
-		
+	public static LocalDateTime toDate(String dateStr) {
 		return LocalDateTime.parse(dateStr, DEFAULT_FORMATTER_TWO);
 	}
 }
