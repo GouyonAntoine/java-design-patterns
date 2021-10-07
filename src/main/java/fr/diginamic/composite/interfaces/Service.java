@@ -4,21 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Service implements IComponent{
+
+	//Attribut
+	private String nom;
     private List<IComponent> employesServices = new ArrayList<>();
 	
-	
+	//Constructeur
 	public Service() {
 	}
 
-
+	//Méthode
 	@Override
 	public Double calculerSalaire() {
-		return this.employesServices.stream().mapToDouble(e -> e.calculerSalaire()).sum();
+		return this.employesServices.stream().mapToDouble(element -> element.calculerSalaire()).sum();
 	}
 
 	
 	public List<IComponent> getEmployesServices() {
-		return employesServices;
+		return this.employesServices;
 	}
 
 
