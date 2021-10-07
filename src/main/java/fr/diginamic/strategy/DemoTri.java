@@ -2,6 +2,8 @@ package fr.diginamic.strategy;
 
 import java.util.List;
 
+import fr.diginamic.strategy.typeTri.TypeTri;
+
 public class DemoTri {
 
 	public static void main(String[] args) {
@@ -10,19 +12,19 @@ public class DemoTri {
 		System.out.println("Avec le Bubble Sort:");
 		
 		Integer[] array1 = {12, -5, 7, 0, 8, 4, -3, 9, 15};
-		tri.exec(1, array1);
+		tri.exec(TypeTri.bubble, array1);
 		List.of(array1).forEach(i -> System.out.print(i+" "));
 		
 		System.out.println("\nAvec l'insertion Sort:");
 		
 		Integer[] array2 = {12, -5, 7, 0, 8, 4, -3, 9, 15};
-		tri.exec(2, array2);
+		tri.exec(TypeTri.insertion, array2);
 		List.of(array2).forEach(i -> System.out.print(i+" "));
 		
 		System.out.println("\nAvec le selection Sort:");
 		
 		Integer[] array3 = {12, -5, 7, 0, 8, 4, -3, 9, 15};
-		tri.exec(3, array3);
+		tri.exec(TypeTri.bubble, array3);
 		List.of(array3).forEach(i -> System.out.print(i+" "));
 
 
