@@ -1,11 +1,13 @@
 package fr.diginamic.state;
 
+import fr.diginamic.state.etat.AvionEtat;
+
 public class Avion {
 
-	private String etat;
-	
+	private AvionEtat etat;
 	private String etatTrain;
 	
+	/*
 	public void rentrerTrainAtterrissage() {
 		if (etat.equals("AU SOL")) {
 			System.out.println("L'avion est au sol. Il est impossible de rentrer le train d'atterrissage.");
@@ -28,19 +30,27 @@ public class Avion {
 		else if (etat.equals("EN APPROCHE")) {
 			System.out.println("Nous allons atterrir. Le train d'atterrissage est sorti.");
 		}
-	}
+	} */
 
 	/** Getter
 	 * @return the etat
 	 */
-	public String getEtat() {
+	public AvionEtat getEtat() {
 		return etat;
 	}
 
 	/** Setter
 	 * @param etat the etat to set
 	 */
-	public void setEtat(String etat) {
+	public void setEtat(AvionEtat etat) {
 		this.etat = etat;
+	}
+
+	public void rentrerTrainAtterrissage() {
+		this.etat.rentrerTrainAtterrissage();
+	}
+	
+	public void sortirTrainAtterrissage() {
+		this.etat.sortirTrainAtterrissage();
 	}
 }
