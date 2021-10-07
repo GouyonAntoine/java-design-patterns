@@ -19,5 +19,5 @@ public class PropertiesSingleton {
 		return INSTANCE;
 	}
 	
-	
+	//ceci est test
 }
