@@ -10,11 +10,17 @@ import java.time.format.DateTimeFormatter;
  */
 public class DateUtils {
 	
+
+	//Attributs
 	/** Formateur par défaut: dd/mm/aaaa */
 	private static final DateTimeFormatter DEFAULT_FORMATTER = DateTimeFormatter.ofPattern("dd/MM/YYYY");
 
 	/** Formateur par défaut: dd/mm/aaaa hh:mm:ss */
 	private static final DateTimeFormatter DEFAULT_FORMATTER_TWO = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"); 
+	//----------
+
+
+
 
 	/** Formate une date en chaine de caractères
 	 * @param date date
