@@ -18,6 +18,5 @@ public class PropertiesSingleton {
 	public static PropertiesSingleton getInstance() {
 		return INSTANCE;
 	}
-	
-	//ceci est test
+
 }
